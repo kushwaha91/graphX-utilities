@@ -1,0 +1,20 @@
+allprojects {
+	apply plugin: 'idea'
+}
+
+repositories {
+    // Use Maven Central for resolving dependencies.
+    mavenCentral()
+}
+subprojects {
+
+	apply plugin: 'base' // For clean task
+	apply plugin: 'scala'
+
+	ext {
+		sparkVersion = "3.1.2"
+		scalaVersion = "2.12"
+        version = "1.0.0"
+	}
+
+}
